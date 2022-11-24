@@ -1,16 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
+
+    <ImageView
+        android:id="@+id/bg_main"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/img" />
+
+    <ImageView
+        android:id="@+id/infoBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/bg_main"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/info" />
+
+    <TextView
+        android:id="@+id/judul1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bg_main"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="60dp"
+        android:text="Manaqib &amp; Maulidurrasul SAW"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/judul2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judul1"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="13dp"
+        android:text="Untuk Semua Ummat"
+        android:textColor="@color/white" />
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="100dp"
+        android:layout_below="@id/judul2"
+        android:layout_height="1dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white" />
     <ListView
         android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/bg_main"
+        android:layout_marginTop="16dp"
+        android:layout_width="390dp"
+        android:layout_height="600dp"/>
 
 
-</LinearLayout>
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package com.ars.pdfreader;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,6 +12,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 //    AdapterData adapterData;
 //    List<String> listData;
     ListView listview;
+    ImageView btnIfno;
 //    private PDFView pdfView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
     };
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        getSupportActionBar().hide();
+        btnIfno = findViewById(R.id.infoBtn);
+        btnIfno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(), AboutActivity.class));
+            }
+        });
+
 //        recyclerView = findViewById(R.id.rvData);
 //        listData = new ArrayList<>();
 //
@@ -75,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), ViewActivity.class);
                 i.putExtra("nama",namaKitab[arg2]);
                 startActivity(i);
-                Toast.makeText(MainActivity.this, namaKitab[arg2], Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, namaKitab[arg2], Toast.LENGTH_SHORT).show();
             }
         });
     }
