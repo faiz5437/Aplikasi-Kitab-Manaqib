@@ -24,14 +24,8 @@ public class ViewActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         String getIntent = getIntent().getStringExtra("nama");
-//        Toast.makeText(this, "ini "+getIntent, Toast.LENGTH_SHORT).show();
         judulView = findViewById(R.id.judul_view);
-
         judulView.setText(getIntent);
-
-
-
-
 
         WebView wv = findViewById(R.id.web_view);
         wv.loadUrl("file:///android_asset/"+getIntent+"/index.html");
