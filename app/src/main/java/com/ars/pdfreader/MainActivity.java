@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ListView listview;
     ImageView btnIfno;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         String[] namaKitab = {"1. Istighosah", "2. Surah Yasiin", "3. Do'a Surah Yasiin", "4. Surah - Surah"
