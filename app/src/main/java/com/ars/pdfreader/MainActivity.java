@@ -23,13 +23,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-//    RecyclerView recyclerView;
-//    LinearLayoutManager linearLayoutManager;
-//    AdapterData adapterData;
-//    List<String> listData;
+
     ListView listview;
     ImageView btnIfno;
-//    private PDFView pdfView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         String[] namaKitab = {"1. Istighosah", "2. Surah Yasiin", "3. Do'a Surah Yasiin", "4. Surah - Surah"
@@ -43,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         getSupportActionBar().hide();
         btnIfno = findViewById(R.id.infoBtn);
+
         btnIfno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,45 +47,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        recyclerView = findViewById(R.id.rvData);
-//        listData = new ArrayList<>();
-//
-//        for (int a = 0; a<10;a++){
-//            listData.add("Data Ke - "+ String.valueOf(a));
-//
-//        }
-//        Log.d("arrcobaan", listData.get(1));
-//
-//        linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-//        recyclerView.setLayoutManager(linearLayoutManager);
-
-//        adapterData = new AdapterData(this, listData);
-//        recyclerView.setAdapter(adapterData);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-//        adapterData.notifyDataSetChanged();
-//        int i = 1;
-//        for (i = 0; i<merekSmartphone.length;i++){
-//
-//        }
         listview = findViewById(R.id.list_view);
         ArrayAdapter<String>  arrAdapter = new ArrayAdapter<>(this, R.layout.item_data, R.id.dataText,namaKitab);
-            listview.setAdapter(arrAdapter);
-//        WebView wv = findViewById(R.id.web_view);
-//        wv.loadUrl("file:///android_asset/Custompage615294/index.html");
-
-
+        listview.setAdapter(arrAdapter);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
 
                 String clickCek = namaKitab.toString();
-//                String getArgId = getString(arg2);
                 Log.d("arg", "cek "+ arg2);
                 Intent i = new Intent(getApplicationContext(), ViewActivity.class);
                 i.putExtra("nama",namaKitab[arg2]);
                 startActivity(i);
-//                Toast.makeText(MainActivity.this, namaKitab[arg2], Toast.LENGTH_SHORT).show();
             }
         });
     }
