@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.PDFReader" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#B728F5</item>
-        <item name="colorPrimaryVariant">#8C11C1</item>
+        <item name="colorPrimary">#3270B6</item>
+        <item name="colorPrimaryVariant">#AAC2E5</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

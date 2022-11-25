@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     ListView listview;
     ImageView btnIfno;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         String[] namaKitab = {"1. Istighosah", "2. Surah Yasiin", "3. Do'a Surah Yasiin", "4. Surah - Surah"
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         listview = findViewById(R.id.list_view);
         ArrayAdapter<String>  arrAdapter = new ArrayAdapter<>(this, R.layout.item_data, R.id.dataText,namaKitab);
-            listview.setAdapter(arrAdapter);
+        listview.setAdapter(arrAdapter);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
