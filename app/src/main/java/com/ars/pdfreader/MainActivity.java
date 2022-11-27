@@ -9,32 +9,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.github.barteksc.pdfviewer.PDFView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView listview;
     ImageView btnIfno;
+    RecyclerView recyclerView;
+    ArrayList<String> arId = new ArrayList<>();
+    ArrayList<String> arNama = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        String[] namaKitab = {"1. Istighosah", "2. Surah Yasiin", "3. Do'a Surah Yasiin", "4. Surah - Surah"
-                , "5. Manaqib", "6. Manaqib Bab 1", "7. Manaqib Bab 2", "8. Manaqib Bab 3", "9. Manaqib Bab 4"
-                , "10. Manaqib Bab 5", "11. Manaqib Bab 6", "12. Manaqib Bab 7", "13. Wahaisuntaha", "14. 'Ibadallah & Do'a 'Ibadallah"
-                , "15. Ya Arhamar Rohimin", "16. Do'a", "17. Nasyid Lailaha ila Allah","18. Nasyid Al Munajah", "19. Maulid Diba'",
-                "20. Do'a Maulid", "21. Shalawat Fi Hubbi", "22. Do'a Al Fatihah"
-    };
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
@@ -47,21 +43,67 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        listview = findViewById(R.id.list_view);
-        ArrayAdapter<String>  arrAdapter = new ArrayAdapter<>(this, R.layout.item_data, R.id.dataText,namaKitab);
-        listview.setAdapter(arrAdapter);
+        recyclerView = findViewById(R.id.rv_data);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+        try {
+            JSONObject obj = new JSONObject(JsonDariAsset());
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            JSONArray userArray = obj.getJSONArray("data");
+//            int a =0;
+            for(int i = 0; i<userArray.length();i++){
+//                a++;
+                JSONObject userDetail = userArray.getJSONObject(i);
+//                arId.add(String.valueOf(a));
+                arId.add(userDetail.getString("id"));
+                arNama.add(userDetail.getString("nama bacaan"));
+                Log.d("JSON OBJECT : ", "jeson 3: "+ userArray.length());
 
-            @Override
-            public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
-
-                String clickCek = namaKitab.toString();
-                Log.d("arg", "cek "+ arg2);
-                Intent i = new Intent(getApplicationContext(), ViewActivity.class);
-                i.putExtra("nama",namaKitab[arg2]);
-                startActivity(i);
             }
-        });
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+//        Log.d("JSON OBJECT : ", "jeson : "+ nama);
+        AdapterData adapterData = new AdapterData( arId, arNama,  this);
+        recyclerView.setAdapter(adapterData);
+
+//        listview = findViewById(R.id.list_view);
+//        ArrayAdapter<String>  arrAdapter = new ArrayAdapter<>(this, R.layout.item_data, R.id.dataText,namaKitab);
+//        listview.setAdapter(arrAdapter);
+//
+//        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//
+//            @Override
+//            public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
+//
+//                String clickCek = namaKitab.toString();
+//                Log.d("arg", "cek "+ arg2);
+//                Intent i = new Intent(getApplicationContext(), ViewActivity.class);
+//                i.putExtra("nama",namaKitab[arg2]);
+//                startActivity(i);
+//            }
+//        });
+    }
+
+    private String JsonDariAsset() {
+        String json = null;
+        try {
+            InputStream inputStream = getAssets().open("data.json");
+
+            int sizeOfFile = inputStream.available();
+            byte[] bufferData = new byte[sizeOfFile];
+            inputStream.read(bufferData);
+            inputStream.close();
+            json = new String(bufferData, "UTF-8");
+            Log.d("JSON OBJECT : ", "jeson 2 : "+ json.toString());
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+        return json;
     }
 }

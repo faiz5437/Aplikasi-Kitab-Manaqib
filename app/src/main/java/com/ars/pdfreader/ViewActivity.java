@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class ViewActivity extends AppCompatActivity {
     WebView wv;
     TextView judulView;
+    ImageView backBtn;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,14 @@ public class ViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         getSupportActionBar().hide();
+
+        backBtn = findViewById(R.id.back_button);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(), MainActivity.class));
+            }
+        });
 
         String getIntent = getIntent().getStringExtra("nama");
         judulView = findViewById(R.id.judul_view);
