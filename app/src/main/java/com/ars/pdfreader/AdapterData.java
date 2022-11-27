@@ -29,7 +29,6 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderViewSaya
     public HolderViewSaya onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_data,parent, false);
         HolderViewSaya holderViewSaya =new HolderViewSaya(layout);
-
         return holderViewSaya;
     }
 

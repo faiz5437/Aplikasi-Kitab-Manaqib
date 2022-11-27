@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         try {
             JSONObject obj = new JSONObject(JsonDariAsset());
-
-            JSONArray userArray = obj.getJSONArray("data");
+            JSONObject objObject = obj.getJSONObject("data");
+            JSONArray userArray = objObject.getJSONArray("manaqib");
 //            int a =0;
             for(int i = 0; i<userArray.length();i++){
 //                a++;
@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
                 arId.add(userDetail.getString("id"));
                 arNama.add(userDetail.getString("nama bacaan"));
                 Log.d("JSON OBJECT : ", "jeson 3: "+ userArray.length());
-
             }
 
         } catch (JSONException e) {

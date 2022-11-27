@@ -1,75 +1,124 @@
-{
-  "data" : [
+{"data" : {
+  "manaqib": [
     {
-      "id" : 1,
-      "nama bacaan" : "Istighosah"
+      "id": 1,
+      "nama bacaan": "Istighosah"
     },
     {
-      "id" : 2,
-      "nama bacaan" : "Surah Yasiin"
+      "id": 2,
+      "nama bacaan": "Surah Yasiin"
     },
     {
-      "id" : 3,
-      "nama bacaan" : "Do'a Surah Yasiin"
+      "id": 3,
+      "nama bacaan": "Do'a Surah Yasiin"
     },
     {
-      "id" : 4,
-      "nama bacaan" : "Surah - Surah"
+      "id": 4,
+      "nama bacaan": "Surah - Surah"
     },
     {
-      "id" : 5,
-      "nama bacaan" : "Manaqib"
+      "id": 5,
+      "nama bacaan": "Manaqib"
+    },
+    {
+      "id": 6,
+      "nama bacaan": "Manaqib Bab 1"
+    },
+    {
+      "id": 7,
+      "nama bacaan": "Manaqib Bab 2"
+    },
+    {
+      "id": 8,
+      "nama bacaan": "Manaqib Bab 3"
+    },
+    {
+      "id": 9,
+      "nama bacaan": "Manaqib Bab 4"
+    },
+    {
+      "id": 10,
+      "nama bacaan": "Manaqib Bab 5"
+    },
+    {
+      "id": 11,
+      "nama bacaan": "Manaqib Bab 6"
+    },
+    {
+      "id": 12,
+      "nama bacaan": "Manaqib Bab 7"
+    },
+    {
+      "id": 13,
+      "nama bacaan": "Wahaisuntaha"
+    },
+    {
+      "id": 14,
+      "nama bacaan": "'Ibadallah & Do'a 'Ibadallah"
+    },
+    {
+      "id": 15,
+      "nama bacaan": "Ya Arhamar Rohimin"
+    },
+    {
+      "id": 16,
+      "nama bacaan": "Do'a"
+    },
+    {
+      "id": 17,
+      "nama bacaan": "Nasyid Lailaha ila Allah"
+    },
+    {
+      "id": 18,
+      "nama bacaan": "Nasyid Al Munajah"
+    },
+    {
+      "id": 19,
+      "nama bacaan": "Maulid Diba'"
+    },
+    {
+      "id": 20,
+      "nama bacaan": "Do'a Maulid"
+    },
+    {
+      "id": 21,
+      "nama bacaan": "Shalawat Fi Hubbi"
+    },
+    {
+      "id": 22,
+      "nama bacaan": "Do'a Al Fatihah"
+    },
+    {
+      "id": 23,
+      "nama bacaan": "Mahalul Qiyam"
+    },
+    {
+      "id": 24,
+      "nama bacaan": "Ya Rasul ( Maulid Diba' )"
     },{
-      "id" : 6,
-      "nama bacaan" : "Manaqib Bab 1"
+      "id": 25,
+      "nama bacaan": "Ya Rabbi ( Maulid Diba' )"
     },{
-      "id" : 7,
-      "nama bacaan" : "Manaqib Bab 2"
+      "id": 26,
+      "nama bacaan": "Alhamdu ( Maulid Diba' )"
     },{
-      "id" : 8,
-      "nama bacaan" : "Manaqib Bab 3"
+      "id": 27,
+      "nama bacaan": "Fasubhana ( Maulid Diba' )"
     },{
-      "id" : 9,
-      "nama bacaan" : "Manaqib Bab 4"
-    },{
-      "id" : 10,
-      "nama bacaan" : "Manaqib Bab 5"
-    },{
-      "id" : 11,
-      "nama bacaan" : "Manaqib Bab 6"
-    },{
-      "id" : 12,
-      "nama bacaan" : "Manaqib Bab 7"
-    },{
-      "id" : 13,
-      "nama bacaan" : "Wahaisuntaha"
-    },{
-      "id" : 14,
-      "nama bacaan" : "'Ibadallah & Do'a 'Ibadallah"
-    },{
-      "id" : 15,
-      "nama bacaan" : "Ya Arhamar Rohimin"
-    },{
-      "id" : 16,
-      "nama bacaan" : "Do'a"
-    },{
-      "id" : 17,
-      "nama bacaan" : "Nasyid Lailaha ila Allah"
-    },{
-      "id" : 18,
-      "nama bacaan" : "Nasyid Al Munajah"
-    },{
-      "id" : 19,
-      "nama bacaan" : "Maulid Diba'"
-    },{
-      "id" : 20,
-      "nama bacaan" : "Do'a Maulid"
-    },{
-      "id" : 21,
-      "nama bacaan" : "Shalawat Fi Hubbi"
-    },{
-      "id" : 22,
-      "nama bacaan" : "Do'a Al Fatihah"
+      "id": 28,
+      "nama bacaan": "Ahdiru Dan Fahtazal"
     }
   ]
+, "husainiyah" : [
+  {
+    "id" : 1,
+    "nama bacaan" : "husaniyah"
+  }
+], "tahlil" : [
+    {
+      "id": 1,
+      "nama bacaan" : "tahlil"
+    }
+  ]
+}
 }

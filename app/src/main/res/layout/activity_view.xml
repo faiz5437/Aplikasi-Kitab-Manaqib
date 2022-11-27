@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/white"
             android:textSize="18sp"
@@ -30,18 +30,11 @@
             android:layout_width="100dp"
             android:layout_height="1dp"
             android:layout_below="@id/judul_view"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@android:color/white" />
 
-        <ImageView
-            android:id="@+id/back_button"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="12dp"
-            android:src="@drawable/ic_arrow_back"/>
 
 
 
