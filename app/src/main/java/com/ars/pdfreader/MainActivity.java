@@ -10,7 +10,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<String> arId = new ArrayList<>();
     ArrayList<String> arNama = new ArrayList<>();
+    LinearLayout btnTahlil, btnHusainiyah;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,28 @@ public class MainActivity extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         getSupportActionBar().hide();
         btnIfno = findViewById(R.id.infoBtn);
+        btnTahlil = findViewById(R.id.btn_tahlil);
+        btnHusainiyah = findViewById(R.id.btn_husainiyah);
+        
+        btnTahlil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Toast.makeText(MainActivity.this, "tahlil Clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(view.getContext(), TahlilActivity.class));
+
+            }
+        });
+        btnHusainiyah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Toast.makeText(MainActivity.this, "husainiyah Clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(view.getContext(), HusainiyahActivity.class));
+
+            }
+        });
+
+
+
         btnIfno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 //        Log.d("JSON OBJECT : ", "jeson : "+ nama);
-        AdapterData adapterData = new AdapterData( arId, arNama,  this);
+        AdapterData adapterData = new AdapterData( arId, arNama, this);
         recyclerView.setAdapter(adapterData);
 
 //        listview = findViewById(R.id.list_view);

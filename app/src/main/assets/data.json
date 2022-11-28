@@ -75,50 +75,52 @@
     {
       "id": 19,
       "nama bacaan": "Maulid Diba'"
-    },
-    {
+    },{
       "id": 20,
-      "nama bacaan": "Do'a Maulid"
+      "nama bacaan": "Ya Rasul ( Maulid Diba' )"
     },
     {
       "id": 21,
-      "nama bacaan": "Shalawat Fi Hubbi"
-    },
-    {
+      "nama bacaan": "Ya Rabbi ( Maulid Diba' )"
+    },{
       "id": 22,
-      "nama bacaan": "Do'a Al Fatihah"
+      "nama bacaan": "Alhamdu ( Maulid Diba' )"
+    },{
+      "id": 23,
+      "nama bacaan": "Fasubhana ( Maulid Diba' )"
+    },{
+      "id": 24,
+      "nama bacaan": "Ahdiru Dan Fahtazal"
     },
     {
-      "id": 23,
+      "id": 25,
       "nama bacaan": "Mahalul Qiyam"
     },
     {
-      "id": 24,
-      "nama bacaan": "Ya Rasul ( Maulid Diba' )"
-    },{
-      "id": 25,
-      "nama bacaan": "Ya Rabbi ( Maulid Diba' )"
-    },{
       "id": 26,
-      "nama bacaan": "Alhamdu ( Maulid Diba' )"
-    },{
+      "nama bacaan": "Do'a Maulid"
+    },
+    {
       "id": 27,
-      "nama bacaan": "Fasubhana ( Maulid Diba' )"
-    },{
+      "nama bacaan": "Shalawat Fi Hubbi"
+    },
+    {
       "id": 28,
-      "nama bacaan": "Ahdiru Dan Fahtazal"
+      "nama bacaan": "Do'a Al Fatihah"
     }
-  ]
-, "husainiyah" : [
+
+
+  ],
+  "husainiyah" :
   {
     "id" : 1,
     "nama bacaan" : "husaniyah"
   }
-], "tahlil" : [
+  ,"tahlil" :
     {
       "id": 1,
       "nama bacaan" : "tahlil"
     }
-  ]
+
 }
 }

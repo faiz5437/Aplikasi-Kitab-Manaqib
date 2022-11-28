@@ -92,24 +92,52 @@
         android:layout_width="500dp"
         android:layout_height="89dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-18dp"
+        android:layout_marginBottom="-15dp"
         android:src="@drawable/botombar4" />
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+    <LinearLayout
+        android:id="@+id/btn_tahlil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginBottom="15dp"
-        android:src="@drawable/logomain"/>
-
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp">
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:src="@drawable/logomain"/>
+    <TextView
+        android:id="@+id/tv_tahlil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tahlil"
+        android:textSize="10dp"
+        android:textColor="@color/white"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btn_husainiyah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="15dp"
-        android:src="@drawable/ic_setting"/>
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:src="@drawable/quran" />
+        <TextView
+            android:id="@+id/tv_husainiyah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Husainiyah"
+            android:textSize="10dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"/>
+    </LinearLayout>
 
 
 </RelativeLayout>
